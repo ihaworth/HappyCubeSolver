@@ -409,11 +409,11 @@ void init_corner(void)
           /* Set this corner of this hole (and all other corners of holes)
              to be referred to as a corner of the solution numbered 'index'. */
           check_cor(pos,corner);
-          index++;
+          corners_index++;
          }
       }
    }
- index--;
+ corners_index--;
 }
 
 /******************************************************************************
@@ -434,10 +434,10 @@ void check_cor(hole pos,int pos_corner)
 
     /* Show that another hole has been found that impinges on this corner of
        the shape, this gives a count of how many pieces. */
-    total_no_at_cor[index]++;
+    total_no_at_cor[corners_index]++;
     
     /* Set the reference of this hole's corner to the corner of the shape. */
-    corn[pos][pos_corner]=index;
+    corn[pos][pos_corner]=corners_index;
     
     /* Check to see if the corner of the hole next to this hole (which shares
        this corner) has been given a reference, and if not, then do it. */

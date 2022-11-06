@@ -191,9 +191,9 @@ void print_free_list(struct free_piece_list_elt *current)
    {
     printf("current->piece_no=%d\n",current->piece_no);
     printf("current->status=%d\n",current->status);
-    printf("current->previous=%d\n",(int)current->previous);
+    printf("current->previous=%ld\n",(long)current->previous);
     printf("(current->previous)->piece_no=%d\n",(current->previous)->piece_no);
-    printf("current->next=%d\n",(int)current->next);
+    printf("current->next=%ld\n",(long)current->next);
     printf("(current->next)->piece_no=%d\n\n",(current->next)->piece_no);
     print_free_list(current->next);
    }
